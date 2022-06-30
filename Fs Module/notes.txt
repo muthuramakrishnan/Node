@@ -59,3 +59,11 @@ stats.isDirectory()
 stats.isFile()
 
 
+//fs.read & fs.readFileSync
+// fs.read(fd, buffer, offset, length, position, callback)
+buffer to hold the contents to be read from the file
+offset where in the buffer you start putting the data
+length --> how much u want to read
+position -> from where you should start reading the data
+
+
