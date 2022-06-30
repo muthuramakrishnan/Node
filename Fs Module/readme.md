@@ -1,0 +1,61 @@
+Opening a file
+
+fs.open(path, flag, [mode], callback) --> async
+fs.openSync(path, flag, [mode]) --> sync
+
+flag denotes what kind of operation you want to perform on the open file
+
+r - open file for reading
+r+ - open file for reading and writing
+rs - open file for reading in synchronous mode
+rs+ - open file for reading and writing in sync mode
+
+writing
+w - open file for writing.  (File is created if it doesn't exist)
+wx - Similar to w.  But it fails if file already exists
+w+ - open file for reading and writing
+wx+ - Like w+ but fails if file exists
+
+Appending
+
+a - open file for Appending
+ax - like a but fails if path exists
+a+ - open file for reading and Appending
+ax+ Similar to a+ but fails if the path exists
+
+You could provide the mode
+This mode specifies the permissions
+This is applicable while creating the file
+
+fs.open callback
+This callback takes 2 arguments, err and filedescriptor
+FD is just a refrence to the file
+
+fs.stat(path, callback);
+fs.statSync(path)
+
+sample stats output
+size Stats {
+  dev: 16777231,
+  mode: 33188, --> access like read etc
+  nlink: 1,
+  uid: 501, -->userid
+  gid: 20,  -->groupid
+  rdev: 0,
+  blksize: 4096,
+  ino: 8964505,
+  size: 981,
+  blocks: 8,
+  atimeMs: 1656600413887.9336,
+  mtimeMs: 1656600413426.8445,
+  ctimeMs: 1656600413426.8445,
+  birthtimeMs: 1656598945751.2246, 
+  atime: 2022-06-30T14:46:53.888Z, --> ACCESS TIME
+  mtime: 2022-06-30T14:46:53.427Z, --> last modified
+  ctime: 2022-06-30T14:46:53.427Z, --> change time (change with respect to permissions)
+  birthtime: 2022-06-30T14:22:25.751Z --> file creation time
+}
+stats.isDirectory()
+stats.isFile()
+
+

@@ -1,0 +1,5 @@
+Run node directly in terminal
+
+Give node command --> This is like a console that we see in chrome
+
+In node we have a global object (similar to window object in vanilla js)
