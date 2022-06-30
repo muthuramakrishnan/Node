@@ -16,11 +16,20 @@ fs.open(readmeFile, "r+", (err, fd) => {
   if (err) {
     console.log("err", err.code, err.message);
   } else {
-    let bytes = fs.readSync(fd, buf, 0, fileSize, 0);
-    console.log("file read size", bytes);
+    // let bytes = fs.readSync(fd, buf, 0, fileSize, 0);
+    // console.log("file read size", bytes);
 
-    console.log("buffer", buf.toString());
-    
+    // console.log("buffer", buf.toString());
+
+    fs.readSync(fd, buf, 0, fileSize, 0, (err, bytes) =>{
+        if(err){
+            console.log("err", err);
+        }
+        else{
+            console.log("bytes", bytes);
+            console.log("content", buf.toString());
+        }
+    });
 
     fs.close(fd, (err) => {
       console.log("file is closed");
