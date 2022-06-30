@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const readmeFile = "readme.md";
+const readmeFile = "notes.txt";
 //fs.open(filepath, flag, [mode], callback)
 fs.open(readmeFile, "r+", (err, fd) => {
   if (err) {
