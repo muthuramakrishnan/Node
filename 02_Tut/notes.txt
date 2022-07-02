@@ -1,0 +1,29 @@
+const server = http.createServer((req, res) => {
+    console.log("request", req)
+});
+
+server.listen(3000);
+
+server.listen --> Node keeps on listening & there's a event loop
+process.exit() -> quits the process
+
+
+res.write() --> TO write the html code into the response
+res --> It is the response object -> usage --> const server = createServer((req, res) => {});
+res.end() --> marks the end of the response.  After this you cannot modify the response
+res.setHeader('HeaderKey', 'HeaderValue')
+res.writeHead(statusCode, {object that holds the headers})
+
+To set headers you can either use res.setHeader or res.writeHead
+res.writeHead allows you set status code & headers at one shot
+res.setHeader --> you can set only one header at a time
+
+req.on("data", () => {}) --> THis event is called whenever a chunk of data is received
+req.on("end", () => {})  --> THis event occurs when the whole chunk got processed
+
+
+    //data event will be fired whenever a new chunk is ready to be read
+
+    //the request body will be in this format
+    here message is the name of the text field that is given in the frontend
+    message=heloi+osdhflasdjflaskdjf%3B
