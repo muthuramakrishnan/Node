@@ -1,0 +1,81 @@
+String, StringBuffer, StringBuilder
+
+String -> Immutable
+StringBuffer -> Mutable
+
+
+String Methods
+concat --> to append 2 strings  --> String s = new String("Durga");
+                                    s.concat("software");
+                                    sop(s)  --> Output --> Durga
+
+== operator & equlas() method ---> String s1 = new String("Durga");
+                                    String s2 = new String("Durga");
+                                    sop(s1==s2) ---> reference comparison so false
+                                    equals method is a part of Object class.  Object class equals method is meant for reference comparison
+                                    sop(s1.equals(s2))--> overriden for content comparison so true
+
+isEmpty()
+length()
+public String replace(char oldChar, char newChar)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex) (end not included)
+public int indexOf(char ch);
+public int lastIndexOf(char ch);
+public String toLowerCase();
+public String toUpperCase();
+
+
+
+StringBuffer Methods
+append --> to append 2 strings  ----> StringBuffer s = new StringBuffer("Durga");
+                                    s.append("software");
+                                    sop(s)  --> Output --> DurgaSoftware
+
+
+== operator & equlas() method ---->  ---> StringBuffer s1 = new StringBuffer("Durga");
+                                    StringBuffer s2 = new StringBuffer("Durga");
+                                    sop(s1==s2)--> reference comparison so false
+                                    sop(s1.equals(s2))--> Not overriden for content comparison so false
+
+public int length()
+public int capacity()
+public char charAt(int index)
+public void setCharAt(int index, char newChar)
+append(String s) ==> ARGUMENT CAN BE ANYTHING -> STRING, BYTE, INT, LONG, float etc
+setLength(int length) --> removes extra characters, if less chars are there then add extra space
+public void ensureCapacity(int capacity)
+public void trimToSize() --> Free memory deallocated
+
+
+
+
+
+String s = new String("Durga")                                                                  String s = "Durga";
+        ||                                    
+        ||
+        ||
+        \/
+If new keyword is used, then immediately an object is created in Heap area                      String is created in SCP.  If already available, then nothing is created in scp
+
+Also the same string is created in SCP
+
+
+
+
+
+Constructors -- String
+
+String s = new String();
+String s = new String(string literal);
+String s = new String(StringBuffer sb);
+String s = new String(StringBuilder sb);
+String s = new String(Char[] charArr);
+String s = new String(byte[] byteArr);
+
+
+Constructors -- StringBuffer
+newCapacity --> ( currentCapcity + 1 ) * 2, default capacity - 16
+StringBuffer s = new StringBuffer();
+StringBuffer s = new StringBuffer(Capcity);
+
