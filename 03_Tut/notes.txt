@@ -1,0 +1,19 @@
+Event loop handles the I/O
+
+Some performance heavy operations are handled by worker pool.  JS process takes in the input & handles it to the worker pool. 
+Once the worker has finished it's task, the callback is called (event loop).
+
+At the begining of each iteration, Event loop checks 
+ --> For any Timers
+ -->Execute Timeout, setInterval callbacks
+ -->It checks other callbacks, Execute IO related
+ --> Then poll phase -> In poll phase nodejs looks for any new i/o events
+ --> Then setImmediate --> this is like setTimeout but invoked immediately after finishing all open pending callbacks
+ ---> CloseEvent callbacks are exectued
+
+
+ npm init --> To initialize the project with npm
+ 
+ "start": "node app.js" --> npm start
+ "start-server": "node app.js" --> npm start-server -> This will not work.  Bcoz start was a special keyword so it workd
+ npm run start-server will work.  For any custom names, you give, you should use npm run
