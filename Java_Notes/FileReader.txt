@@ -1,0 +1,16 @@
+FileReader fr = new FileReader(String fname);
+FileReader fr = new FileReader(File f);
+
+Methods
+fr.read() --> return type is int (Unicode value of character) last char is -1
+
+Fr r = new FR("abc.txt");
+int i = fr.read();
+while(i!=-1){
+    sop((char)i);
+    i=fr.read();
+}
+
+fr.read(char[] ch) --> return type is int (no of characters read)
+
+fr.close();

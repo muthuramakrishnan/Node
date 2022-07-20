@@ -1,7 +1,0 @@
-1. Give the port no --> process.env.PORT --> where heroku can inject the env vars
-2. Specify the node environment -> You can give this in package.json
-  "engines": {
-    "node": "16.13.2",
-    "npm": "8.4.0"
-  },
-  3. Provide the start script

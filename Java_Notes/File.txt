@@ -1,0 +1,24 @@
+File f = new File("abc.txt"); --> This is just a reference, No physical file will be created
+
+f.exists() --> will return false if executed for the first time
+f.createFile() --> Creates new file
+
+You can also create a directory with file object
+f.mkdir();
+
+
+File class Constructors
+1. File f = new File(String name) --> can be file name / directory name
+2. File f = new File(String subdirname, String name) --> In some other location
+3. File f = new File(File subdir, String name)
+
+
+Methods
+f.exists()
+f.createNewFile()
+f.mkdir()
+f.isFile()
+f.isDirectory()
+f.list() ==> return type is String array --> this returns the names of files / directories inside a directory
+f.length() --> returns the number of characters present inside a file. (return type is long)
+f.delete() -> deletes the file / directory

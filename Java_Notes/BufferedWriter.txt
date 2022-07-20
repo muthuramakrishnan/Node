@@ -1,0 +1,11 @@
+BufferedWriter br = new BufferedWriter(Writer w);
+BufferedWriter br = new BufferedWriter(Writer w, int bufferSize);
+
+FileWriter Methods + newLine()
+BufferedWriter Methods
+write(int ch)
+write(char[] ch)
+write(String s)
+flush()
+close()
+newLine()

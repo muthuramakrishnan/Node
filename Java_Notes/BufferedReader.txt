@@ -1,0 +1,9 @@
+BufferedReader br = new BufferedReader(Reader r);
+BufferedReader br = new BufferedReader(Reader r, int bufferSize);
+
+
+Methods
+int read()
+int read(Char[] ch)
+void close()
+String readLine(); //last value is null
